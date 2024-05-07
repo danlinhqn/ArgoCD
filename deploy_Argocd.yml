@@ -21814,7 +21814,6 @@ spec:
       containers:
       - args:
         - /usr/local/bin/argocd-repo-server
-        - "--redis-insecure-skip-tls-verify"
         env:
         - name: ARGOCD_RECONCILIATION_TIMEOUT
           valueFrom:
