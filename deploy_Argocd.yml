@@ -21814,6 +21814,7 @@ spec:
       containers:
       - args:
         - /usr/local/bin/argocd-repo-server
+        - "--insecure"
         env:
         - name: ARGOCD_RECONCILIATION_TIMEOUT
           valueFrom:
@@ -21989,7 +21990,6 @@ spec:
           value: /helm-working-dir
         - name: HELM_DATA_HOME
           value: /helm-working-dir
-        args: ["--insecure"]
         image: quay.io/argoproj/argocd:v2.10.6
         imagePullPolicy: Always
         livenessProbe:
