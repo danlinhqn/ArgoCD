@@ -22000,7 +22000,6 @@ spec:
           periodSeconds: 30
           timeoutSeconds: 5
         name: argocd-repo-server
-        args: ["--insecure"]
         ports:
         - containerPort: 8081
         - containerPort: 8084
