@@ -14,6 +14,7 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 ```
 kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 -d
 ```
+yy8vR4WP6JohhC9s
 
 ### Public ArgoCD with NodePord
 
@@ -21,14 +22,8 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.pas
 kubectl edit svc argocd-server -n argocd
 ```
 
-
 ----
 
-# Tạo khóa riêng tư
-openssl genrsa -out key.pem 2048
+## Cho chạy ra ngoài
 
-# Tạo yêu cầu chứng chỉ
-openssl req -new -key key.pem -out csr.pem
-
-# Tạo chứng chỉ tự ký
-openssl x509 -req -days 365 -in csr.pem -signkey key.pem -out cert.pem
+k port-forward service/argocd-server -n argocd-server -n argocd 8080:443
