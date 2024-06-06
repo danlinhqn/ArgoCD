@@ -2,6 +2,11 @@
 
 Tool same is Tekton
 
+## Link Docs
+```https://github.com/jaleev/argocd-demo-public```
+
+```https://github.com/argoproj/argo-cd/releases/tag/v2.11.2```
+
 ### Setup in K8S
 
 ```
