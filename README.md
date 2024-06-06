@@ -27,3 +27,6 @@ kubectl edit svc argocd-server -n argocd
 ## Cho chạy ra ngoài
 
 k port-forward service/argocd-server -n argocd-server -n argocd 8080:443
+
+## Cài chi tiết hơn 
+https://www.youtube.com/watch?v=8AJlVQy6Cx0
